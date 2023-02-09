@@ -1,0 +1,15 @@
+#+title: Infi's setup for JP learning
+
+This is just a very hacky set of stuff that replicates my personal setup for
+various JP learning resources. *Proceed at your own peril*.
+
+Setup notes for the various tools follow.
+
+* Anki
+
+See [[file:anki/anki.org]].
+
+
+* Yomichan
+
+See [[file:yomichan/yomichan.org]].

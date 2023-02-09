@@ -1,0 +1,193 @@
+#+title: Anki Settings
+
+Most of this is stock Anki configuration you will find anywhere. I use
+[[https://aquafina-water-bottle.github.io/jp-mining-note/][Aquafina's JP Mining Note template]] so most of the stuff here is directly taken
+from there.
+
+I am always using the latest available version of Anki.
+
+* General Setup
+
+** Scheduling
+
+I enable the V3 scheduler. Otherwise I mostly follow [[https://animecards.site/ankisetup/][the setup from DJT]] for
+now. As far as scheduling goes, that means setting the =Learn ahead limit= to
+900 mins.
+
+fsrs4anki may be interesting in the future fwiw.
+
+** Deck options
+
+I cba to use different options for different decks so I just have the default
+deck itself following the [[https://animecards.site/ankisetup/][the setup from DJT]]. See the following for specifics.
+
+*** Daily Limits
++ 20 new cards per day
++ Max reviews set to 9999
+
+*** New Cards
++ Learning steps set to =1m 5m 1h=
++ Graduating interval set to =1=
++ Easy interval set to =4=
++ Insert order set to =Sequential (oldest cards first)=
+
+*** Lapses
+
++ Relearning steps set to =2m 1h=
++ Minimum interval set to =1=
++ Leech threshold set to =8=
++ Leech action set to =Tag Only=
+
+*** Display Order
+
++ New/review order set to =Show before reviews=
++ Other settings untouched from defaults
+
+*** Timer
+
++ Maximum answer seconds set to 60s for going afk
++ Show answer timer enabled
+
+*** Advanced
+
+These settings don't really matter with the v3 scheduler but fwiw.
+
++ Maximnum interval set to =36500=
++ Starting ease set to =3.00=
++ Easy bonus set to =1.30=
++ Interval modifier set to =1.20=
++ Hard interval set to =1.20=
++ New interval set to =0.20=
+
+* Add-ons
+
+** AJT Furigana
+
+Just following Aquafina's jp-mining-template [[https://aquafina-water-bottle.github.io/jp-mining-note/setupanki/][setup guide]].
+
+Homepage is at https://ankiweb.net/shared/info/1344485230 fwiw.
+
+Add to Anki from =Tools -> Add-ons -> Get Add-ons= with code =1344485230=.
+
+** AJT Pitch Accent
+
+Again, just following Aquafina's jp-mining-template [[https://aquafina-water-bottle.github.io/jp-mining-note/setupanki/][setup guide]].
+
+Homepage is at https://ankiweb.net/shared/info/1225470483 fwiw.
+
+Add to Anki from =Tools -> Add-ons -> Get Add-ons= with code =1225470483=.
+
+** Anki-Connect
+
+Basically a requirement if you are serious about learning JP.
+
+Homepage is at https://ankiweb.net/shared/info/2055492159 fwiw.
+
+Add to Anki from =Tools -> Add-ons -> Get Add-ons= with code =2055492159=.
+
+** CSS Injector
+
+Using this with Aquafina's settings for their mining note. See the [[https://aquafina-water-bottle.github.io/jp-mining-note/setupanki/][setup guide]]
+there if you want to do it yourself.
+
+Homepage is at https://ankiweb.net/shared/info/181103283 but it hasn't been
+updated to work with latest versions of Anki so I am using the release from
+[[https://github.com/Aquafina-water-bottle/anki-css-injector/releases/tag/v2023-02-06.1][Aquafina's fork]] for now.
+
+Add to Anki from =Tools -> Add-ons -> Install from file=. Select the
+downloaded =.ankiaddon= file.
+
+** Speed Focus Mode
+
+Just so I don't stress and spend an eternity trying to compute what the answer
+is as I tend to try and decompose down to the kanji components to try and
+figure out the meaning if I don't know them when I should just guess a meaning
+and move on. More reptition over perfect knowledge.
+
+Using with the defaults (10s alert, 15s auto-reveal, 60s auto-fail) for
+now. Note that the auto-fail is effectively ignored due to max answer settings
+being lower than the combined auto-reveal + auto-fail value.
+
+Homepage is at https://ankiweb.net/shared/info/1046608507 fwiw.
+
+Add to Anki from =Tools -> Add-ons -> Get Add-ons= with code =1046608507=.
+
+** True Retention
+
+Better stats basically.
+
+Homepage is at https://ankiweb.net/shared/info6/613684242 fwiw.
+
+Add to Anki from =Tools -> Add-ons -> Get Add-ons= with code =613684242=.
+
+** Yomichan Forvo Server
+
+Provides additional audio for Yomichan if their defaults can't find some.
+
+Homepage is at https://ankiweb.net/shared/info/580654285 fwiw.
+
+Add to Anki from =Tools -> Add-ons -> Get Add-ons= with code =580654285=.
+
+** Yomichan Local Audio Server
+
+Provides additional audio for Yomichan if their defaults can't find some.
+
+Although this is intended for offline use, for me this is really just so
+yomichan can find more audio. I am not sure if it's just because my PC is old
+or what but fetching results from online is faster than fetching results from
+this so I still have the default JapanesePod101 as the first source.
+
+Homepage is at https://github.com/Aquafina-water-bottle/local-audio-yomichan
+fwiw.
+
+I use the SQL-based version.
+
+Add to Anki from =Tools -> Add-ons -> Install from file=. Select the
+downloaded =.ankiaddon= file.
+
+* Decks
+
+*** Core2.3k
+
+This is from Anacreon over at DJT. Name is a misnomer since the deck actually
+contains <2k cards.
+
+Homepage is at https://anacreondjt.gitlab.io/docs/coredeck/.
+
+* Mining
+
+** Sources
+
+*** Anime
+
+For now I am only mining from anime subs. I use [[https://github.com/Ajatt-Tools/mpvacious][mpvacious]] to capture the subs
+and corresponding audio/video content. I don't like their default hotkeys so I
+modified the hotkeys.
+
+In particular, my changes:
++ Add global hotkeys for sub timing. I don't want to open the osd menu just to
+  do this.
++ Disable the global hotkey to export a note with mpvacious' style. I don't
+  need two different mining decks. Actually I disable all hotkeys for mpv in
+  general and explicitly load the ones I care about from =input.conf=
++ Disable the global hotkeys related to secondary subs. I don't care about
+  secondary subs and the hotkeys were conflciting with other hotkeys I use.
++ Change global hotkeys for sub replays. I only use a subset of them, see my
+  =input.conf= for details.
+
+*** Manga
+
+Basically ignoring mining from manga for now. I do read very basic manga here
+and there but don't mine from them for now.
+
+*** Visual Novels
+
+I am still setting up a VN mining workflow. Didn't bother to complete it as I
+don't plan to get to using VNs until after I have gone through a couple of
+basic anime first.
+
+** Card types
+
+I really only use vocab cards for now. As noted before, I use Aquafina's mining
+note. I am using a "click card" which is a vocab card with the corresponding
+sentence available if you click on the word (or press the hotkey =n= by default).

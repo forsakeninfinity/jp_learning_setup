@@ -1,0 +1,110 @@
+#+title: Yomichan settings
+
+This is my current configuration for yomichan cobbled together from various
+places. The settings are exported as [[file:yomichan.json]]. You can import them
+from =Yomichan Settings -> Backup -> Import settings=. Yomichan will complain
+about field templates being non-standard but that's okay, it only has some
+handlebars from Aquafina's JP Mining Note.
+
+* Setup Notes
+
+** Dicts
+
+You can find the dictionaries I currently use under [[file:dicts/][yomichan/dicts]]. You
+can find the originals by following the references if you care to.
+
+*** Language
+
+I currently use only bilingual dicts. Updated [[https://github.com/Aquafina-water-bottle/jmdict-english-yomichan][JMDict from Aquafina]] and a couple
+of dictionaries from Shoui of TMW.
+
+*** Frequency
+
+Only using JPDB and CC100 for now.
+
+*** Grammar
+
+Only DoJG for now.
+
+*** Kanji
+
+Only KanjiDic for now. I actually didn't like having more than one of these
+around because it was just noise but you could limit the results differently if
+you wanted.
+
+Not using any Kanji Frequence dicts for now. I figure I don't really care about
+Kanji for now and only care about vocab so will just pick up the kanji if the
+vocab requires it.
+
+*** Pitch Accent
+
+Just using the recommended dict from TMW. I didn't like having multiple ones of
+these around either.
+
+** General
+
+I have Yomichan sort results based on CC100.
+
+** Scanning
+
+I enable scanning on hover without a hotkey to hold down. You can just disable
+scanning altogether with =Alt + Delete= when you don't want to be looking up
+stuff anyway.
+
+** Audio
+
+I add two additional sources which both require corresponding Anki plugins to
+have been setup appropriately.
+
+*** Local Forvo Server
+
+Anki add-on ID =580654285=.
+
+Just to find more audio if default Yomichan sources are missing them.
+
+*** Local Audio Server
+
+Just forked as-is from [[https://github.com/Aquafina-water-bottle/local-audio-yomichan][here]]. You have to add the add-on manually to Anki by
+installing from file.
+
+Although this is intended for offline use, for me this is really just so
+yomichan can find more audio. I am not sure if it's just because my PC is old
+or what but fetching results from online is faster than fetching results from
+this so I still have the default JapanesePod101 as the first source.
+
+** Translation
+
+I add some custom translations that aren't in dicts like duplicate kanji (i.e.,
+=々=) or numerals to their kanji forms because some people throw in numerals
+instead of kanji for words that have numbers.
+
+=Settings -> Translation -> Custom Text Replacement Patterns= if you want to
+play around with it yourself.
+
+** Anki
+
+*** AnkiConnect
+
+Duh. Have to enable this if you are even remotely serious about learning JP. I
+just use the defaults for everything.
+
+*** Anki Card Format
+
+Straight up just setting up [[https://aquafina-water-bottle.github.io/jp-mining-note/setupyomichan/][Aquafina's JP Mining Note]] which I more or less use
+as is. I like click vocab cards the most from the various options so that's
+what I have it creating by default.
+
+I use a deck called =Mine= fwiw so you will need that deck created in Anki if
+you want to use this as-is.
+
+*** Anki Card Templates
+
+Again, additional handlebar stuff from Aquafina that's required for the mining
+note.
+
+* References
+
++ [[https://github.com/MarvNC/JP-Resources][Marv's JP Resources]]
++ [[https://github.com/Aquafina-water-bottle/local-audio-yomichan][Local Audio Server for Anki / yomichan]]
++ [[https://aquafina-water-bottle.github.io/jp-mining-note/setupyomichan/][Aquafina's JP Mining Note]]
++ [[http://learnjapanese.moe/yomichan/][TMW Yomichan Setup Tutorial]]
